@@ -104,12 +104,12 @@ Invoke-WebRequest `
 
 
 # Prepare to import ActiveDirectory and GroupPolicy modules
-if (-not (Test-Path -Path .\$adModuleoutput)) {
+if (-not (Test-Path -Path $adModuleoutput)) {
   Write-Error 'ActiveDirectory.zip file not found. Exiting.'
   Exit
 }
 else {
-  Expand-Archive -Path .\$adModuleoutput -DestinationPath "$toolsPath\ActiveDirectory" -Force
+  Expand-Archive -Path $adModuleoutput -DestinationPath "$toolsPath\ActiveDirectory" -Force
 }
 
 # Import module DLL's into GAC and Powershell
