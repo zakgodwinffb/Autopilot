@@ -138,7 +138,7 @@ Start-Sleep 1
 Do {Start-Sleep 1} While (-not (Get-Process cmd -ErrorAction SilentlyContinue))
 Start-Sleep 1
 Get-Process cmd | Stop-Process -Force
-start-process powershell.exe -argument '-nologo -noprofile -noexit -executionpolicy bypass -command $scriptPath ' -Wait
+Start-Process powershell.exe -ArgumentList '-nologo -noprofile -noexit -executionpolicy bypass -command $scriptPath ' -Wait
 "@
 $file2 = "$($toolsPath)\shiftf10.ps1"
 $string | out-file $file2

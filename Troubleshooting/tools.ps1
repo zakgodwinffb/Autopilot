@@ -118,22 +118,22 @@ $scriptrun.Add_Click({
 
 ##Launch Event Viewer
 $eventvwr.Add_Click({ 
-    Start-Process -filepath "C:\Windows\System32\eventvwr.exe"
+    Start-Process -FilePath "$($env:windir)\System32\eventvwr.exe"
   })
 
 ##Launch Regedit
 $regedit.Add_Click({ 
-    Start-Process -filepath "C:\Windows\regedit.exe"
+    Start-Process -FilePath "$($env:windir)\regedit.exe"
   })
 
 ##Launch Windows Explorer
 $explorer.Add_Click({ 
-    Start-Process -filepath "C:\Windows\explorer.exe"
+    Start-Process -FilePath "$($env:windir)\explorer.exe"
   })
 
 ##Launch CMTrace on SetupAct.log
 $log1.Add_Click({ 
-    Start-Process -filepath "$ffbToolsPath\cmtrace.exe" -ArgumentList $env:windir\panther\setupact.log
+    Start-Process -FilePath "$ffbToolsPath\cmtrace.exe" -ArgumentList $env:windir\panther\setupact.log
   })
 
 ##Launch CMTrace on IntuneMgmt.log
